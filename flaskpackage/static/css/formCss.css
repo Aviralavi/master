@@ -1,0 +1,473 @@
+/*@import 'https://fonts.googleapis.com/css?family=Comfortaa:300,400,700&subset=cyrillic,cyrillic-ext,latin-ext';*/
+@import "import.css";
+*{margin: 0px; padding:0px;font-family: "comfortaa", "Comic Sans MS";}
+/* header */
+body {
+    font-family: "comfortaa";
+    background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAFfKj/FAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAlQTFRF4OXp8PX50NXZBLxR6QAAAEhJREFUeNpiYGJgYGACCCAGMAAIIDiDCSCAGLAAgABCEcbBBAggGIORQhogwNCcwIjddKgQI6ojUbkgWSYMo+BCjKiOR9PLBAAchAAxHFDBbwAAAABJRU5ErkJggg==');
+    margin-top: auto;
+	margin-left :auto;
+	/*background : #f5f5f5;*/
+	font-weight:bold;
+    overflow-y:auto;
+    overflow-x:auto;
+}
+#spanbar{
+	float:left;
+	margin-left:100px;
+	margin-top: 100px;
+    padding: 0px 25px 25px;
+    background: #fff;
+    box-shadow: 
+        0px 0px 0px 5px rgba( 255,255,255,0.4 ), 
+        0px 4px 20px rgba( 0,0,0,0.33 );
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    display: table;
+    position: static;
+	width:250px;
+	max-width:250px;
+	text-align:center;
+	height:60%;
+	max-height:10000px;
+    overflow-y:auto;
+    overflow-x:auto;
+}
+#console_bar{
+    overflow:auto;
+	float:left;
+	margin-left:1200px;
+	margin-top: 100px;
+    padding: 0px 25px 25px;
+    background: #F8F9F9;
+    box-shadow:
+        0px 0px 0px 5px rgba( 255,255,255,0.4 ),
+        0px 4px 20px rgba( 0,0,0,0.33 );
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    position: absolute;
+	width:250px;
+	max-width:250px;
+	text-align:center;
+	height:500px;
+    z-index: 1;
+    top: 0;
+    left: 0;
+	/*max-height:100%;*/
+}
+@media screen and (max-width:1500px){
+#console_bar{
+	margin-left:1170px;
+}
+
+}
+#navBar_header{
+	width:100%;
+	height:60px;
+	background:#000000;
+	box-shadow:0px 2px 4px #f5f5f5;
+}
+#navBar{
+	width:600px;
+	height:80px;
+	float:right;
+	margin-right:30px;
+}
+
+#navBar>li{
+	width:200px;
+	list-style: none;
+	float:left;
+}
+li>a{
+	display:block;
+	color:rgba(255,255,255,0.4);
+	line-height:60px;
+	text-align:center;
+	font-size:17px;
+	text-decoration: none;
+}
+
+li>a:hover,li>a:focus{color:#FFFFFF}
+
+#logo{
+	padding-left:100px;
+	padding-top:5px;
+	width:200px;
+	height:80px;
+	float:left;
+}
+
+/*dynamic button*/
+.button_delete {
+    background: url(../img/deleteLogo.png) no-repeat;
+    position:relative;
+    display: inline-block;
+    top: 5px;
+    margin:0;
+    border: none;
+    padding-right: 0;
+    /*margin-top:12px;*/
+    /*font-size: 16px;*/
+    text-decoration: none;
+    cursor: pointer;
+    width:24px;
+    height:24px;
+}
+
+.button_delete:hover{
+    /*width:27px;*/
+    height:27px;
+    background: url(../img/deleteLogoHover.png) no-repeat;
+}
+
+.button_add {
+    /*background-color: #3e8e41;*/
+    background: url(../img/addGreen.png) no-repeat;
+    float:right;
+    position:relative;
+    border: none;
+    margin-bottom:10px;
+    margin-right:6px;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    width:50px;
+    height:50px;
+}
+.button_add:hover{
+    background: url(../img/addGreenHover.png) no-repeat;
+}
+.button_add {border-radius: 50px;}
+
+.button_save {
+    background: url(../img/save.png) no-repeat;
+    float:right;
+    position:relative;
+    border: none;
+    margin-bottom:10px;
+    margin-right:6px;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    width:50px;
+    height:50px;
+}
+.button_save:hover{
+    background: url(../img/saveHover.png) no-repeat;
+}
+.button_save {border-radius: 50px;}
+
+@media screen and (max-width:1260px){
+#navBar{
+	width:606px;
+}
+#navBar>li{
+	width:200px;
+}
+}
+
+/* form */
+.customContain {
+    width: 100%;
+	float: left;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+#delete_img{
+	display:inline-block;
+    padding-left:20px;
+}
+
+/*#add_file{
+	float:right;
+    padding-right:10px;
+	padding-top:5px;
+	padding-bottom:20px;
+}*/
+
+#signup {
+	float:left;
+	margin-left:100px;
+	margin-top: 100px;
+    padding: 0px 25px 25px;
+    background: #F8F9F9;
+    box-shadow: 
+        0px 0px 0px 5px rgba( 255,255,255,0.4 ), 
+        0px 4px 20px rgba( 0,0,0,0.33 );
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    display: table;
+    position: static;
+}
+
+#signup .header {
+    margin-bottom: 20px;
+}
+
+#signup .header h3 {
+	padding-top:15px;
+    color: #333333;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#signup .header p {
+    color: #8f8f8f;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+#signup .sep {
+    height: 1px;
+    background: #e8e8e8;
+    width: 406px;
+    margin: 0px -25px;
+}
+
+#signup .inputs {
+    margin-top: 25px;
+}
+
+#signup .inputs label {
+    color: #8f8f8f;
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin-bottom: 7px;
+    display: inline-block;
+}
+
+input::-webkit-input-placeholder {
+    color:#b5b5b5;
+}
+
+input:-moz-placeholder {
+    color:    #b5b5b5;
+}
+
+#signup .inputs input[type=text] {
+    background: #f5f5f5;
+    font-size: 1em;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border: none;
+    padding: 13px 10px;
+    width: 650px;
+    margin-bottom: 20px;
+    box-shadow: inset 0px 2px 3px rgba( 0,0,0,0.1 );
+    clear: both;
+	
+}
+
+
+#signup .inputs input[type=text]:focus {
+    background: #fff;
+    box-shadow: 0px 0px 0px 3px #C2CDE5, inset 0px 2px 3px rgba( 0,0,0,0.2 ), 0px 5px 5px rgba( 0,0,0,0.15 );
+    outline: none;   
+}
+#signup .inputs input[type=number] {
+    background: #f5f5f5;
+    font-size: 1em;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border: none;
+    padding: 13px 10px;
+    width: 650px;
+    margin-bottom: 20px;
+    box-shadow: inset 0px 2px 3px rgba( 0,0,0,0.1 );
+    clear: both;
+
+}
+
+
+#signup .inputs input[type=number]:focus {
+    background: #fff;
+    box-shadow: 0px 0px 0px 3px #C2CDE5, inset 0px 2px 3px rgba( 0,0,0,0.2 ), 0px 5px 5px rgba( 0,0,0,0.15 );
+    outline: none;
+}
+
+/*#signup .inputs .checkboxy {
+    display: block;
+    position: static;
+    height: 25px;
+    margin-top: 10px;
+    clear: both;
+}*/
+
+#signup .inputs input[type=checkbox] {
+    margin-right: 10px;
+    margin-top: 3px;
+	
+}
+
+#signup .inputs label.terms {
+    float: left;
+    font-size: 14px;
+    font-style: italic;
+}
+
+/*#submit {*/
+/*    font-family: "comfortaa";*/
+/*    width: 91.7%;*/
+/*    margin-top: 20px;*/
+/*    padding: 15px 0;*/
+/*    color: #fff;*/
+/*    font-size: 14px;*/
+/*    font-weight: 500;*/
+/*    letter-spacing: 1px;*/
+/*    text-align: center;*/
+/*    text-decoration: none;*/
+/*        background: -moz-linear-gradient(*/
+/*        top,*/
+/*        #b9c5dd 0%,*/
+/*        #a4b0cb);*/
+/*    background: -webkit-gradient(*/
+/*        linear, left top, left bottom, */
+/*        from(#b9c5dd),*/
+/*        to(#a4b0cb));*/
+/*    -moz-border-radius: 5px;*/
+/*    -webkit-border-radius: 5px;*/
+/*    border-radius: 5px;*/
+/*    border: 1px solid #737b8d;*/
+/*    -moz-box-shadow:*/
+/*        0px 5px 5px rgba(000,000,000,0.1),*/
+/*        inset 0px 1px 0px rgba(255,255,255,0.5);*/
+/*    -webkit-box-shadow:*/
+/*        0px 5px 5px rgba(000,000,000,0.1),*/
+/*        inset 0px 1px 0px rgba(255,255,255,0.5);*/
+/*    box-shadow:*/
+/*        0px 5px 5px rgba(000,000,000,0.1),*/
+/*        inset 0px 1px 0px rgba(255,255,255,0.5);*/
+/*    text-shadow:*/
+/*        0px 1px 3px rgba(000,000,000,0.3),*/
+/*        0px 0px 0px rgba(255,255,255,0);*/
+/*    display: table;*/
+/*    position: static;*/
+/*    clear: both;*/
+/*}*/
+
+/*#submit:hover {*/
+/*    background: -moz-linear-gradient(*/
+/*        top,*/
+/*        #a4b0cb 0%,*/
+/*        #b9c5dd);*/
+/*    background: -webkit-gradient(*/
+/*        linear, left top, left bottom, */
+/*        from(#a4b0cb),*/
+/*        to(#b9c5dd));*/
+/*}*/
+#submit {
+    width: 91.7% !important;
+    color: black !important;
+    text-decoration: none;
+    font-size: 1.1em;
+    text-align: center;
+    background: transparent;
+    padding: 10px;
+    border: 4px solid black !important;
+    display: inline-block;
+    transition: all 0.4s ease 0s;
+    width: 150px;
+}
+#submit:hover {
+    color: #ffffff !important;
+    background: black;
+    border-color: black !important;
+    transition: all 0.5s ease 0s;
+}
+#submit{border-radius: 30px;}
+
+
+/* Customize the label (the checkboxy) */
+.checkboxy {
+  display: inline-block;
+  position: relative;
+  padding-left: 20px;
+  padding-bottom: 11.5px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkboxy input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.checkboxy:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkboxy input:checked ~ .checkmark {
+  background-color: #A2E6A0;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkboxy input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkboxy .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+#off1 {
+    background: url(../img/cut_before.png) no-repeat;
+    border: none;
+    margin-top: 9px;
+    margin-left: 9px;
+    text-decoration: none;
+    cursor: pointer;
+    width:40px;
+    height:40px;
+    position:fixed;
+    z-index: 10;
+}
+#off1:hover{
+    background: url(../img/cut_after.png) no-repeat;
+}
+#off1 {border-radius: 40px;}
+#off1 {border-radius: 40px;}
