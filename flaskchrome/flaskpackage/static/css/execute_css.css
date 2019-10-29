@@ -1,0 +1,50 @@
+@import "import.css";
+#signup .inputs textarea{
+    background: #f5f5f5;
+    font-size: 1em;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border: none;
+    padding: 13px 10px;
+    width: 650px;
+    margin-bottom: 20px;
+    box-shadow: inset 0px 2px 3px rgba( 0,0,0,0.1 );
+    clear: both;
+}
+
+#signup .inputs textarea:focus {
+    background: #fff;
+    box-shadow: 0px 0px 0px 3px #C2CDE5, inset 0px 2px 3px rgba( 0,0,0,0.2 ), 0px 5px 5px rgba( 0,0,0,0.15 );
+    outline: none;
+}
+
+#sidenavNEW {
+    overflow:auto;
+    margin-top:60px;
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #EAECEE;
+    padding-top: 50px;
+}
+
+#sidenavNEW a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+#sidenavNEW a:hover {
+  color: #000000;
+}
+
+@media screen and (max-height: 450px) {
+  #sidenavNEW {padding-top: 15px;}
+  #sidenavNEW a {font-size: 18px;}
+}

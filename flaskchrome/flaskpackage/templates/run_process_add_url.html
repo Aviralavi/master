@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{%block logo%}
+<img src="../static/img/exe.png" alt="Image" height="100" width="100"/>
+{%endblock logo%}
+
+{%block content%}
+{% if bookmarks_start %}
+    {% for i in bookmarks_start %}
+        {% set name = "name"+ loop.index|string %}
+        {% set url = "url"+ loop.index|string %}
+        {% set idval1 = "idval1"+ loop.index|string %}
+        {% set idval2 = "idval2"+ loop.index|string %}
+        {% set idval3 = "idval2"+ loop.index|string %}
+        {% set deleteIMG = "deleteIMG"+ loop.index|string %}
+        {% set deleteIMGval = "deleteIMGval"+ loop.index|string %}
+        {% set loopCountVal = loop.index|string %}
+        {% for x,y in i.items() %}
+            <input style="width: 170px;" id="{{idval1}}" type="text" class="type1" value="{{x}}" name="{{name}}" readonly/> &nbsp &nbsp
+            <input style="width:600px;" id="{{idval2}}" type="text" value="{{y[0]}}" name="{{url}}" readonly/> &nbsp &nbsp
+            <label style="display: inline-block" class="checkboxy">
+                <input type="checkbox" checked="checked" name="{{checkclicked}}">
+				<span class="checkmark"></span>
+            </label>&nbsp &nbsp
+            <input style="width:50px;display:inline-block;color:black;padding:6px 0px;" id="{{idval3}}" type="text" class="type1" value="{{y[1]}}" name="{{repeat}}" readonly/> &nbsp &nbsp
+			</br>
+			<div class="sep"></div></br>
+        {% endfor %}
+    {% endfor %}
+{% endif %}
+            <input style="width: 170px;" id="idval_add1" type="text" placeholder="Enter Name" class="type1" name="name_add" /> &nbsp &nbsp
+            <input style="width:600px;" id="idval_add2" type="text" placeholder="Enter Path" name="url_add" /> &nbsp &nbsp
+            <input style="width:50px;display:inline-block;color:black;padding:6px 0px;" id="idval_add3" type="number" placeholder="Sec" name="repeat_add"/> &nbsp &nbsp
+			</br>
+			<div class="sep"></div></br>
+
+            <button class="button_save" id="add_file" type="submit" name="add_file" value="saveButton"></button>
+
+{%endblock%}
+{%block sidebar%}
+{%endblock%}

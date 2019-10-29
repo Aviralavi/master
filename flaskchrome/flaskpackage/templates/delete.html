@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block off %}
+<form method="post">
+<button id="off1" type="submit" name="off2_name" value="off"></button>
+</form>
+{%endblock off%}
+{%block logo%}
+<img src="../static/img/deleteImage.png" alt="Image" height="100" width="100"/>
+{%endblock logo%}
+
+{%block content%}
+{% if bookmarks_del %}
+    {% for i in bookmarks_del %}
+        {% set name = "name"+ loop.index|string %}
+        {% set url = "url"+ loop.index|string %}
+        {% set idval1 = "idval1"+ loop.index|string %}
+        {% set idval2 = "idval2"+ loop.index|string %}
+        {% set deleteIMG = "deleteIMG"+ loop.index|string %}
+        {% set deleteIMGval = "deleteIMGval"+ loop.index|string %}
+        {% set loopCountVal = loop.index|string %}
+        {% set checkclicked = "check"+ loop.index|string %}
+        {% for x,y in i.items() %}
+            <input style="width: 180px;" id="{{idval1}}" type="text" class="type1" value="{{x}}" name="{{name}}" readonly/> &nbsp &nbsp
+            <input id="{{idval2}}" type="text" value="{{y}}" name="{{url}}" readonly/> &nbsp &nbsp
+            <label style="display: inline-block" class="checkboxy">
+                <input type="checkbox" checked="checked" name="{{checkclicked}}">
+				<span class="checkmark"></span>
+            </label>&nbsp &nbsp
+            <button class="button_delete" id="{{deleteIMG}}" type="submit" name="{{deleteIMGval}}" value="{{loopCountVal}}"></button>
+			</br>
+			<div class="sep"></div></br>
+        {% endfor %}
+    {% endfor %}
+{% endif %}
+            <button class="button_add" id="add_file" type="submit" name="addName" value="addButton"></button>
+            <input id="submit" type="submit" name="deleteClicked" value="D e l e t e" >
+
+{%endblock%}
+{%block sidebar%}
+{%endblock%}
